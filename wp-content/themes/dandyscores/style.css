@@ -1,6 +1,6 @@
 /*!
 Theme Name: Dandyscores
-Theme URI: http://underscores.me/
+Theme URI: http://github.com/dandyxu/wpTheme-Learning
 Author: Dandy Xu
 Author URI: http://dandyxu.com
 Description: A new theme for the new time. Why you can't start from scratch? Let's get cracking.
@@ -265,7 +265,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -273,6 +273,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 p {
