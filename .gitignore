@@ -23,3 +23,4 @@ wp-content/plugins/hello.php
 .idea/inspectionProfiles/
 .idea/workspace.xml
 wp-content/uploads/2017/
+wp-content/themes/gulp-dev/node_modules/
