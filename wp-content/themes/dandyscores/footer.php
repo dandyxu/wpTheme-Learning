@@ -14,6 +14,14 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+        <nav class="footer-social">
+            <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'menu-3',
+                    'menu_id'        => 'footer',
+                ) );
+            ?>
+        </nav><!-- End Footer Social -->
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dandyscores' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */

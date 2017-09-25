@@ -46,6 +46,7 @@ if ( ! function_exists( 'dandyscores_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'dandyscores' ),
 			'menu-2' => esc_html__( 'Secondary', 'dandyscores' ),
+			'menu-3' => esc_html__( 'Social Media Menu', 'dandyscores' ),
 		) );
 
 		/*
