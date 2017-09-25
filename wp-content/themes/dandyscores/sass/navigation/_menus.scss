@@ -1,4 +1,4 @@
-.main-navigation {
+/*.main-navigation {
 	clear: both;
 	display: block;
 	float: left;
@@ -14,7 +14,7 @@
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 100%;
+			top: 1.5em;
 			left: -999em;
 			z-index: 99999;
 
@@ -68,10 +68,10 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 	}
-}
+}*/
 
 /* Small menu. */
-.menu-toggle,
+/*.menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
@@ -83,7 +83,7 @@
 	.main-navigation ul {
 		display: block;
 	}
-}
+}*/
 
 .comment-navigation,
 .posts-navigation,
