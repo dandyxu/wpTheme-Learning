@@ -3,27 +3,18 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 2px solid;
-	/* border-color: $color__border-button; */
 	border-color: black;
-	/* border-radius: 3px; */
-	/* background: $color__background-button; */
 	background: transparent;
-	/* color: rgba(0, 0, 0, .8); */
 	color: black;
+	font-family: $font__sans;
 	@include font-size(1);
 	line-height: 1;
-	/* padding: .6em 1em .4em; */
 	padding: .5em 1em;
 
-	/* &:hover {
-		border-color: $color__border-button-hover;
-	}*/
-
-	&:hover,
+	&:hover ,
 	&:active,
 	&:focus {
-		/* border-color: $color__border-button-focus; */
-		background: black;
-		color: white;
+		background: white;
+		color: black;
 	}
 }
