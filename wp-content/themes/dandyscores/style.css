@@ -1129,7 +1129,7 @@ button.dropdown-toggle {
 	}
 }
 
-.social-menu ul {
+.footer-social ul {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1141,14 +1141,14 @@ button.dropdown-toggle {
 	padding: 0;
 }
 
-.social-menu ul a {
+.footer-social ul a {
 	display: block;
 	padding: .5em 1em;
 	color: white;
 	text-decoration: none;
 }
 
-.social-menu ul a:hover, .social-menu ul a:focus {
+.footer-social ul a:hover, .footer-social ul a:focus {
 	text-decoration: underline;
 }
 
