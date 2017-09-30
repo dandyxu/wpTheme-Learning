@@ -208,6 +208,9 @@ function dandyscores_scripts() {
 		'collapse' => __( 'Collapse child menu', 'dandyscores'),
 	));
 
+	// Wrap <figure class="centered-image" /> to img.aligncenter
+	wp_enqueue_script( 'dandyscores-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20170930', true );
+
 	wp_enqueue_script( 'dandyscores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

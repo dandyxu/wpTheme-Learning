@@ -1,23 +1,24 @@
+@charset "UTF-8";
 /*!
-Theme Name: Dandyscores
-Theme URI: http://github.com/dandyxu/wpTheme-Learning
-Author: Dandy Xu
-Author URI: http://dandyxu.com
-Description: A new theme for the new time. Why you can't start from scratch? Let's get cracking.
+Theme Name: Humescores
+Theme URI: https://github.com/mor10/humescores/
+Author: Morten Rand-Hendriksen
+Author URI: https://mor10.com/courses
+Description: A new theme for a new time. This theme showcases the best of WordPress and Underscores and is the project for the Building Themes From Scratch Using Underscores course at LinkedIn Learning and Lynda.com.
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: dandyscores
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: humescores
+Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Dandyscores is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Humescores is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -41,7 +42,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-/* consistent media sizes */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -263,21 +263,19 @@ body,
 button,
 input,
 select,
-optgroup,
 textarea {
-	color: #404040;
+	color: #000;
 	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
 	body,
 	button,
 	input,
 	select,
-	optgroup,
 	textarea {
 		font-size: 20px;
 		font-size: 1.25rem;
@@ -285,8 +283,10 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
+	margin-top: .75em;
+	margin-bottom: .25em;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	clear: both;
 }
 
 h1 {
@@ -314,7 +314,8 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-top: .5em;
+	margin-bottom: 1em;
 }
 
 dfn, cite, em, i {
@@ -322,7 +323,22 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	position: relative;
+	margin: 0 0 1em;
+	background: #eee;
+	padding: 1em 2em .5em 5em;
+	font-style: italic;
+}
+
+blockquote:before {
+	position: absolute;
+	top: -.2em;
+	left: -.13em;
+	content: "“";
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 12em;
+	line-height: 100%;
+	color: white;
 }
 
 address {
@@ -384,10 +400,6 @@ blockquote, q {
 	quotes: "" "";
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
-	content: "";
-}
-
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -396,7 +408,7 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em;
 }
 
 ul {
@@ -410,7 +422,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: .5em;
 }
 
 dt {
@@ -434,8 +446,42 @@ figure {
 }
 
 table {
+	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+thread th {
+	border-bottom: 2px solid #bbb;
+	padding-bottom: .5em;
+}
+
+td,
+th {
+	vertical-align: top;
+}
+
+th {
+	padding: .4em;
+	text-align: left;
+}
+
+tr {
+	border-bottom: 1px solid #eee;
+}
+
+td {
+	padding: .4em;
+}
+
+th:first-child,
+td:first-child {
+	padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+	padding-right: 0;
 }
 
 /*--------------------------------------------------------------
@@ -446,21 +492,14 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 2px solid;
-	/* border-color: $color__border-button; */
 	border-color: black;
-	/* border-radius: 3px; */
-	/* background: $color__background-button; */
 	background: transparent;
-	/* color: rgba(0, 0, 0, .8); */
 	color: black;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
 	line-height: 1;
-	/* padding: .6em 1em .4em; */
 	padding: .5em 1em;
-	/* &:hover {
-		border-color: $color__border-button-hover;
-	}*/
 }
 
 button:hover, button:active, button:focus,
@@ -473,9 +512,8 @@ input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	/* border-color: $color__border-button-focus; */
-	background: black;
-	color: white;
+	background: white;
+	color: black;
 }
 
 input[type="text"],
@@ -574,91 +612,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-/*.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-}*/
-/* Small menu. */
-/*.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}*/
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -691,8 +644,6 @@ a:hover, a:active {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	word-wrap: normal !important;
-	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
@@ -752,8 +703,6 @@ a:hover, a:active {
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
@@ -766,7 +715,6 @@ a:hover, a:active {
 .clear:after,
 .entry-content:after,
 .comment-content:after,
-.site-header:after,
 .site-content:after,
 .site-footer:after {
 	clear: both;
@@ -792,13 +740,13 @@ a:hover, a:active {
 ## Header
 --------------------------------------------------------------*/
 .header-image {
-	max-height: 65%;
+	max-height: 60vh;
 	overflow: hidden;
 }
 
 .header-image img {
 	display: block;
-	width: 100%;
+	width: 100vw;
 }
 
 .site-header {
@@ -881,7 +829,6 @@ a:hover, a:active {
 	}
 	.site-branding {
 		width: 35%;
-		/* flex: flex-grow | flex-shrink | flex-basis */
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 0 auto;
 		        flex: 1 0 auto;
@@ -892,14 +839,13 @@ a:hover, a:active {
 }
 
 /*
- Header Menu
- */
+Header Menu
+*/
 .main-navigation {
 	display: block;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-weight: 400;
 	clear: left;
-	/* Customization Area */
 }
 
 .main-navigation ul {
@@ -956,7 +902,7 @@ a:hover, a:active {
 }
 
 .main-navigation .menu-item-has-children,
-.main-navigation .page-item-has-children {
+.main-navigation .page_item_has_children {
 	min-width: 218px;
 }
 
@@ -988,7 +934,7 @@ button.dropdown-toggle {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Toggle small menu and sub-menus on */
+/* Toggle small menu and children on */
 .toggled-on ul,
 .sub-menu.toggled-on {
 	display: block;
@@ -1037,6 +983,13 @@ button.dropdown-toggle {
 		    -ms-flex-pack: end;
 		        justify-content: flex-end;
 		padding-top: 0;
+		/* If you want dropdowns to open on hover, uncomment this: */
+		/*
+			li:hover > ul,
+				li:focus > ul {
+				display: block;
+			}
+			*/
 	}
 }
 
@@ -1091,34 +1044,44 @@ button.dropdown-toggle {
 	border-bottom: 5px solid #b51c35;
 }
 
-.entry-meta {
+.entry-meta,
+.entry-footer {
 	font-size: 90%;
 }
 
-.entry-meta a {
+.entry-meta a,
+.entry-footer a {
 	font-weight: 700;
 	text-decoration: none;
 	color: black;
 }
 
-.entry-meta:focus, .entry-meta:hover {
+.entry-meta a:focus, .entry-meta a:hover,
+.entry-footer a:focus,
+.entry-footer a:hover {
 	color: black;
 	border-bottom: 3px solid #b51c35;
 }
 
 .byline::after {
-	content: '|';
+	content: "|";
 	margin: 0 .5em;
 }
 
-.edit-link::before,
-.comments-link::before {
-	content: '|';
+.comments-link::before,
+.edit-link::before {
+	content: "|";
 	margin: 0 .5em;
 }
 
+.byline,
 .updated:not(.published) {
 	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
 }
 
 .page-content,
@@ -1130,6 +1093,11 @@ button.dropdown-toggle {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-footer {
+	margin: 1.5em 0;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -1161,7 +1129,7 @@ button.dropdown-toggle {
 	}
 }
 
-.footer-social ul {
+.social-menu ul {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1173,14 +1141,14 @@ button.dropdown-toggle {
 	padding: 0;
 }
 
-.footer-social ul a {
+.social-menu ul a {
 	display: block;
 	padding: .5em 1em;
 	color: white;
 	text-decoration: none;
 }
 
-.footer-social ul a:hover, .footer-social ul a:focus {
+.social-menu ul a:hover, .social-menu ul a:focus {
 	text-decoration: underline;
 }
 
@@ -1230,11 +1198,6 @@ object {
 	max-width: 100%;
 }
 
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-	display: inline-block;
-}
-
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -1255,6 +1218,22 @@ object {
 
 .wp-caption-text {
 	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Images
+--------------------------------------------------------------*/
+.wp-caption.aligncenter,
+.centered-image {
+	max-width: 100vw;
+	margin: 0 -1em;
+}
+
+@media screen and (min-width: 600px) {
+	.wp-caption.aligncenter,
+	.centered-image {
+		margin: 0 -2em;
+	}
 }
 
 /*--------------------------------------------------------------
