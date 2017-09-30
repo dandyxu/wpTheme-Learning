@@ -113,3 +113,20 @@ endif;
 			printf( '<span class="cat-links">' . esc_html__( '%1$s', 'dandyscores' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 	}
+
+	/**
+	 * Post navigation (previous / next post) for single posts.
+	 */
+
+	function dandyscores_post_navigation() {
+		the_post_navigation( array(
+			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next ', 'dandyscores') . '</span>' .
+				'<span class="screen-reader-text">' . __( 'Next Post: ', 'dandyscores') . '</span>' .
+				'<span class="post-title">%title</span>',
+			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous ', 'dandyscores') . '</span>' .
+			               '<span class="screen-reader-text">' . __( 'Previous Post: ', 'dandyscores') . '</span>' .
+			               '<span class="post-title">%title</span>',
+
+
+		));
+	}
