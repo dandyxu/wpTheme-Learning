@@ -15,7 +15,7 @@
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
-
+	
 	ol {
 		list-style-type: none;
 	}
@@ -38,11 +38,11 @@
 	a {
 		text-decoration: none;
 		border: none;
-
+		
 		&:hover,
 		&:focus {
 			text-decoration: underline;
-		}
+		}	
 	}
 }
 
@@ -57,12 +57,12 @@
 		border-radius: 50px;
 	}
 
-}
+} 
 
 .children {
 	margin-left: 1em;
 	padding-left: 0;
-
+	
 	@media screen and (min-width: $query__medium) {
 		margin-left: 2em;
 	}
@@ -126,7 +126,7 @@
 	padding-bottom: .5em;
 	font-size: .8em;
 	line-height: 1em;
-
+	
 	a {
 		color: #7D7D7D;
 
@@ -149,7 +149,7 @@
 .reply {
 	margin-bottom: 1.5em;
 	text-align: right;
-
+	
 	a {
 		display: inline-block;
 		padding: .5em 1.4em;
@@ -159,7 +159,7 @@
 		line-height: 1.3em;
 		text-decoration: none;
 		border: 1px solid #c3c3c3;
-
+		
 		&:hover,
 		&:focus {
 			color: #fff;
@@ -175,17 +175,69 @@
 	ol {
 		list-style-type: decimal;
 	}
-
+	
 	a {
 		word-wrap: break-word;
 	}
-
-}
+	
+} 
 
 .bypostauthor .avatar {
 	box-sizing: content-box;
 	border: 5px solid $color__interactive;
 	margin-top: -5px;
-    margin-left: -5px;
+	margin-left: -5px;
+}
+
+/* Comment Form */
+
+
+.comment-reply-title {
+	margin-bottom: 1em;
+}
+
+.comment-list .comment-reply-title {
+	text-align: left;
+}
+
+.comment-form {
+	font-family: $font__sans;
+	line-height: 1.3em;
+	
+	a {
+		font-weight: 500;
+	}
+	
+	.form-submit {
+		text-align: right;
+	}
+	
+	.form-submit input {
+		padding: .5em 1.4em;
+		font-size: 85%;
+		color: #000;
+		line-height: 1.3em;
+		text-decoration: none;
+		border: 1px solid #c3c3c3;
+		
+		&:hover,
+		&:focus {
+			color: #fff;
+			background: $color__interactive;
+			border-color: $color__interactive;
+			
+		}
+	}
+	
+	label {
+		width: 33%;
+		display: block;
+		font-style: italic;
+		padding-bottom: .4em;
+	}
+	
+	.required {
+		color: #D54E21;
+	}
 }
 
