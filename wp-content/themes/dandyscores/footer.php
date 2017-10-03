@@ -13,6 +13,8 @@
 
 	</div><!-- #content -->
 
+    <?php get_sidebar( 'footer'); ?>
+
 	<footer id="colophon" class="site-footer">
         <nav class="footer-social">
             <?php
