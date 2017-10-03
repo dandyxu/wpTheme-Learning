@@ -1572,13 +1572,67 @@ button.dropdown-toggle {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+.widget-area {
+	margin-top: 1.5em;
+}
+
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 2em;
+	padding: 0 0 2em;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	/* Make sure select elements fit in widgets. */
 }
 
+.widget ul,
+.widget ol {
+	padding: .7em 0 0;
+	margin-bottom: 0;
+	list-style-type: none;
+}
+
+.widget ul li,
+.widget ol li {
+	display: block;
+	line-height: 2em;
+}
+
+.widget ul li ul,
+.widget ul li ol,
+.widget ol li ul,
+.widget ol li ol {
+	margin-left: .5em;
+}
+
+@media screen and (min-width: 30em) {
+	.widget ul li ul,
+	.widget ul li ol,
+	.widget ol li ul,
+	.widget ol li ol {
+		margin-left: 1em;
+	}
+}
+
+.widget a {
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.widget a:hover, .widget a:focus {
+	border-bottom: 3px solid #b51c35;
+}
+
 .widget select {
-	max-width: 100%;
+	width: 100%;
+	height: 2.5em;
+	padding: 10px;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	border: 1px solid #ccc;
+}
+
+.widget-title {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-size: 1.4em;
 }
 
 /*--------------------------------------------------------------
