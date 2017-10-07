@@ -24,3 +24,4 @@ wp-content/plugins/hello.php
 .idea/workspace.xml
 wp-content/uploads/2017/
 wp-content/themes/gulp-dev/node_modules/
+wp-content/themes/gulp-dev/package-lock.json
