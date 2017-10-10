@@ -16,7 +16,7 @@ function dandyscores_body_classes( $classes ) {
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 
-		$classes[] = 'archieve-view';
+		$classes[] = 'archive-view';
 
 	}
 
