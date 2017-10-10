@@ -130,3 +130,21 @@ endif;
 
 		));
 	}
+
+	/**
+	 * Customize ellipsis at end of excerpts
+	 */
+	function dandyscores_excerpt_more ( $more ) {
+		return " ...";
+	}
+
+	add_filter ( 'excerpt_more', 'dandyscores_excerpt_more');
+
+	/**
+	 * Filter excerpt length to 100 words
+	 */
+	function dandyscores_excerpt_length ( $length ) {
+		return 100;
+	}
+
+	add_filter ( 'excerpt_length', 'dandyscores_excerpt_length' );
