@@ -41,9 +41,11 @@ if ( ! function_exists( 'dandyscores_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		// Add a image
+		// Add a image size
 		add_image_size( 'dandyscores-full-bleed', 2000, 1200, true);
 
+		// Add another image size for featured images to index and archive pages
+		add_image_size ( 'dandyscores-index-img', 800, 450, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
