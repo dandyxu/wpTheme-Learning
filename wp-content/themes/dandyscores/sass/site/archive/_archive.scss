@@ -3,6 +3,7 @@
   background-color: #eee;
 
   .post {
+    position: relative;
     background: #fff;
   }
 
@@ -25,6 +26,27 @@
       .widget-area {
         width: $size__ratio-small;
       }
+    }
+  }
+}
+
+.continue-reading {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-family: $font__sans;
+
+  a {
+    display: block;
+    padding: .5em 1em;
+    font-size: 90%;
+    text-decoration: none;
+    background: hsl(0, 0%, 85%);
+
+    &.focus,
+    &.hover {
+      color: white;
+      background: $color__interactive;
     }
   }
 }
