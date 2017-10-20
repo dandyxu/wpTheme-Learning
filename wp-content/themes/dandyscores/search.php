@@ -19,7 +19,13 @@ if ( have_posts() ) : ?>
 			?></h1>
     </header><!-- .page-header -->
 
-<?php endif; ?>
+<?php 
+else :
+
+	get_template_part( 'template-parts/content', 'none');
+	return; // rest of template never run at all
+
+endif; ?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -47,11 +53,7 @@ if ( have_posts() ) : ?>
 				'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ' , 'dandyscores' ) . '</span>',
 			));
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
+		?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
