@@ -14,9 +14,9 @@
 
 @media screen and (min-width: $query__medium) {
 	/* Only single post will apply has-sidebar class */
-	.single {
-
-		&.has-sidebar {
+	/* Add page will apply flexbox */
+	.single.has-sidebar,
+	.page {
 
 			.hentry {
 				display: flex;
@@ -35,6 +35,20 @@
 				.widget-area {
 					width: $size__ratio-small;
 				}
+			}
+	}
+
+
+	.page {
+		&.has-page-sidebar{
+			.hentry {
+				flex-direction: row-reverse;
+			}
+		}
+		
+		&:not(.has-page-sidebar) {
+			.hentry {
+				justify-content: flex-end;
 			}
 		}
 	}

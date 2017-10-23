@@ -14,7 +14,16 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<?php
+        if ( has_post_thumbnail() ) { ?>
+            <figure class="featured-image full-bleed">
+                <?php
+                the_post_thumbnail('dandyscores-full-bleed');
+                ?>
+            </figure><!-- .featured-image full-bleed -->
+    <?php } ?>
+
+	<div class="entry-content post-content">
 		<?php
 			the_content();
 
@@ -23,7 +32,12 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .entry-content .post-content -->
+
+    <?php
+        get_sidebar( 'page' );
+    ?>
+
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
