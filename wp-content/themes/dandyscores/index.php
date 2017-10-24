@@ -42,8 +42,8 @@ get_header(); ?>
 
 			// the_posts_navigation();
             the_posts_pagination( array(
-                    'prev_text' => dandyscores_get_svg( array( 'icon' => 'arrow-left') ) . __( 'Newer', 'dandyscores' ),
-                    'next_text' => __( 'Older', 'dandyscores' ) . dandyscores_get_svg( array( 'icon' => 'arrow-right') ),
+                    'prev_text' => dandyscores_get_svg( array( 'icon' => 'arrow-left', 'fallback' => true) ) . __( 'Newer', 'dandyscores' ),
+                    'next_text' => __( 'Older', 'dandyscores' ) . dandyscores_get_svg( array( 'icon' => 'arrow-right', 'fallback' => true) ),
                     'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ' , 'dandyscores' ) . '</span>',
             ));
 
