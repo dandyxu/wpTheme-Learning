@@ -341,4 +341,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Load SVG icon functions
+ */
+require get_template_directory() . '/inc/icon-functions.php';
+
 
