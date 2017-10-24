@@ -859,7 +859,7 @@ a:hover, a:active {
 
 @media screen and (min-width: 900px) {
 	/* Only single post will apply has-sidebar class */
-	/* Add page will apply flexbox */
+	/* Add page will apply flexbox and has-page-sidebar class */
 	.single.has-sidebar .hentry,
 	.page .hentry {
 		display: -webkit-box;
