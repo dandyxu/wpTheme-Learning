@@ -15,6 +15,34 @@ function dandyscores_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+	/**
+	 * Custom Customizer Customizations
+	 */
+
+	 // Setting for header and footer background color
+	 $wp_customize->add_setting( 'theme_bg_color', array(
+			'default' => '#002254',
+			'transport' => 'postMessage',
+			'type' => 'theme_mod',
+			'sanitize_callback' => 'sanitize_hex_color',
+
+	 	)
+	 );
+
+	 // Control for header and footer background color
+	 $wp_customize->add_control(
+		 new WP_Customize_Color_Control(
+			 $wp_customize,
+			 'theme_bg_color', array(
+				 'label' => __( 'Header and footer background color', 'dandyscores'),
+				 'section' => 'colors',
+				 'settings' => 'theme_bg_color'
+			 )
+		 )
+	 );
+
+
+
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
 			'selector'        => '.site-title a',
